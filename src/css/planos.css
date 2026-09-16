@@ -1,0 +1,113 @@
+body {
+    font-family: sans-serif;
+    background-color:black ;                         /* #f4f4f4 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007BFF;
+    }
+    .pricing-container {
+    display: flex; /* Usa Flexbox para alinhar os planos */
+    justify-content: center; 
+    gap: 20px; /* Espaçamento entre os planos */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    max-width: 100%; 
+    height: auto;
+    }
+    .pricing-plan {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(211,211,211, 1);
+    text-align: center;
+    padding: 30px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service {
+        background-color: #d8c0e9;
+    }
+    .pricing-plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(211,211, 221, 2);
+    border: 5px solid #551bb3 ; /* Borda de destaque para quando o mouse estiver encima #007BFF*/
+    }
+    /* .featured {
+    /* transform: scale(1.05); Aumenta ligeiramente o plano destacado
+    } */
+    .plan-header h2 {
+    margin-top: 0;
+    color: #333;
+    }
+    .price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 10px 0;
+    }
+    .price span {
+    font-size: 0.5em;
+    font-weight: normal;
+    color: #666;
+    }
+    .plan-features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 30px;
+    }
+    .plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    }
+    .signup-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    margin-left: -8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    }
+    .signup-button:hover {
+
+      background-color:#551bb3;  /*#0056b3*/
+      
+    }
+
+    .price:hover {
+      cursor: pointer;
+      color:#551bb3; 
+      
+    }
+
+    .voltar{
+        color: white;
+        margin-top: -1780px;
+        cursor: pointer;
+       
+    }
+
+    .voltar a:hover{
+             color:#551bb3; 
+
+    }
+
+    a{
+         text-decoration: none;
+          color: honeydew;
+    }
+
+    
+    
+    
+
+    /* Responsividade básica para telas muito pequenas */
+    @media (max-width: 600px) {
+    .pricing-plan {
+    width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+    }
+    }

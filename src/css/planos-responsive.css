@@ -1,0 +1,47 @@
+/* ==========================================================================
+   CONFIGURAÇÃO BASE (Padrão para telas grandes / Desktop) PLANOS-MOBILE
+   ========================================================================== */
+.voltar {
+    padding: 20px 4%;
+}
+
+/* Container principal usa Grid para organizar os 11 cartões */
+.pricing-container {
+    max-width: 1200px;
+    margin-right:  40px;
+    padding: 40px 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pricing-plan {
+    width: 100%;
+    box-sizing: border-box;
+    /* Adicione aqui suas propriedades visuais como background, border, etc. */
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE: AJUSTES COMPLEMENTARES PARA TELAS MENORES (Até 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .pricing-container {
+        /* Reduz o espaçamento interno e o vão entre cartões no celular */
+        padding: 20px 4%;
+        gap: 20px;
+        
+        /* Alternativa opcional: força 1 coluna exata se quiser travar o tamanho */
+        grid-template-columns: 1fr;
+    }
+
+    /* Evita que títulos muito longos (como DIAGNÓSTICO...) quebrem o layout */
+    .plan-header h2 {
+        font-size: 1.4rem;
+        word-wrap: break-word;
+    }
+    
+   /*  Meus ajustes(Acréscimo da classe voltar com padding de 10px 2%) */
+    .voltar {
+    padding: 10px 2%;
+}
+}

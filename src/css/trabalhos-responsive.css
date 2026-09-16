@@ -1,0 +1,240 @@
+/* ==========================================================================
+   CONFIGURAÇÃO BASE (Para telas grandes / Desktop) TRABALHOS-MOBILE
+   ========================================================================== */
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.header-container, .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Oculta elementos do menu mobile no desktop */
+.btn-abrir-menu, .menu-mobile, .overlay-menu, .menu-hamburguer {
+    display: none;
+}
+
+.img-port {
+    width: 23%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+img.stop{
+     margin-right: 15rem; /* Para as imagens da página trabalho em telas menores 21/08/2026 */
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE: MEDIA QUERY PARA DISPOSITIVOS MÓVEIS (Até 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+/*Meus ajustes Adicionado responsividade no dia 24/06/2026 */
+
+       html,body {
+ /* corta o scroll lateral */
+   overflow-x: hidden; 
+   width:100%; 
+ 
+}
+    
+    /* 1. Ajustes Gerais do Topo (Header) */
+    .header-container {
+        padding: 15px 4%;
+    }
+
+    .logo img {
+        max-width: 180px; /* Reduz o tamanho do logo */
+        height: auto;
+    } 
+
+  /*Meus ajustes Adicionado responsividade no dia 25/06/2026 */
+     img.stop{
+     width: 100%;
+     /* max-width: 100%; */
+     height: auto;
+            
+    }  
+
+    /* Oculta o menu tradicional e o botão de contato padrão */
+    .menu-desktop, .btn-contato {
+        display: none !important;
+    }
+
+    /* Exibe o botão de abrir o menu mobile ====================================================*/
+     .btn-abrir-menu {
+        display: block;
+        font-size: 30px;
+         color: #fff; /* Altere a cor conforme seu design */
+        cursor: pointer; 
+    } 
+
+    /* Configura o painel do menu mobile (escondido por padrão fora da tela) */
+/* Configura o painel do menu mobile */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto fora da tela */
+    width: 70%; 
+    height: 100vh;
+    background-color: #252525 !important; /* Cor cinza escuro visível */
+    z-index: 9999;
+    transition: 0.5s ease-in-out;
+    padding: 80px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    display: block !important; /* Força o container a existir */
+}
+
+/* Quando ganha a classe ativa, desliza para a tela */
+.menu-mobile.abrir-menu {
+    right: 0 !important;
+}
+
+/* Torna a lista visível e remove estilos do desktop */
+.menu-mobile nav {
+    display: block !important;
+}
+
+.menu-mobile nav ul {
+    display: flex !important;
+    flex-direction: column !important; /* Coloca um link abaixo do outro */
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.menu-mobile nav ul li {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Estiliza os links com cor branca contrastante */
+.menu-mobile nav ul li a {
+    color: #ffffff !important; /* Texto branco puro */
+    text-decoration: none !important;
+    font-size: 20px !important;
+    display: block !important;
+    padding: 15px 10px !important;
+    border-bottom: 1px solid #444 !important; /* Linha divisória */
+}
+
+/* Botão de fechar (X) */
+.menu-mobile .btn-fechar {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 28px;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+
+/* ESTA É A CLASSE CHAVE: Quando o JavaScript adicionar 'abrir-menu', o menu aparece */
+.menu-mobile.abrir-menu {
+    right: 0 !important; /* Traz o menu para dentro da tela */
+}
+
+/* Torna a lista visível e remove estilos do desktop */
+.menu-mobile nav {
+    display: block !important;
+}
+
+/* Configura o fundo escuro transparente atrás do menu */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    display: none; /* Escondido por padrão */
+}
+
+/* Quando o menu abrir, mostra o fundo escuro também */
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+/* Estilização do botão 'X' de fechar dentro do menu */
+.menu-mobile .btn-fechar {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Ajuste simples para os links ficarem um abaixo do outro */
+.menu-mobile nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+
+
+/*========================FIM ABRIR MENU=============================================================*/
+    /* 2. Seção Inicial / Apresentação (Flex para Bloco) */
+    .flex.service {
+        flex-direction: column-reverse; /* Imagem fica no topo e texto embaixo */
+        text-align: center;
+    }
+
+   
+
+    .img-topo-site img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+
+    .txt-topo-site .btn-contato {
+        display: block !important; /* Reexibe o botão de serviço */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    section.topo-do-site {
+    padding: 41px 18%;
+    text-align: left;
+    font-stretch: expanded;
+}
+
+    /* 3. Painel de Processos (Etapas da Revisão) */
+    .process-painel {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-port {
+        width: 100%; /* Cartões ocupam a largura total da tela */
+        height: 250px;
+    }
+
+    .img-port .overlay {
+    font-size: small;
+}
+
+/*Crição para posicionamento de redes sociais 25/06/2026*/
+    .line-footer .flex .btn-social {
+        display: flex;
+        justify-content: center;
+        margin: auto 60%;
+    }
+}

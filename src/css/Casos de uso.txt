@@ -1,0 +1,26 @@
+PROGRESSO DA RESOLUÇÃO DO SITE DE MACÂNICA
+
+ÁREA RESPONSIVA 
+
+[X] FOTO CENTRAL 320 -768PX    
+[x] ÁREA TRABALHO DA PÁGINA INICIAL(No responsivo, uma coluna de trabalhos)
+[x] REDES SOCIAIS APARECIMENTO (230-245) ACERTO(768 -1024) 
+[x] FUNCIONALIDADE DO MENU
+[x] FINALIZAÇÃO DAS ESTAPAS DE PROCESSOS
+
+========================================================================
+NOVAS CORRÇÕES COLATERAIS
+
+[x] CORREÇÃO DO POSCIONAMENTO DA PÁGINA PLANOS
+[] CENTRALIZAÇÃO DAS REDES 
+[] CENTRALIZAÇÃO DA ÁREA TRABALHOS
+[] POSICIONAMENTO DOS ELEMENTOS DA PÁGINA PLANOS E BOTÃO VOLTAR
+[] BOTÃO TOPO NAS PÁGINAS
+[] RESPIRO NOS TEXTOS DOS PROCESSOS NA PÁGINA TRABALHOS
+
+ Colocar site no ar Até dia 15/08/2026 - Primeira versão comercial.
+ Faltam 06 dias para a FINALIZAÇÃO do projeto
+
+
+[] Para reslver a centralização das redes , basta .line-footer .flex .btn-social e colocar margin-left :28px
+[x] Para reslver a centralização da área de trabalhos , basta [index-responsive.css].interface / padding 0px 1%;

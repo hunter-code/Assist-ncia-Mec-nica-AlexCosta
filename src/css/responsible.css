@@ -1,0 +1,89 @@
+/* Estilo para desktop (padrão) */
+.menu-hamburguer {
+  display: none; /* Esconde o botão do hambúrguer em telas grandes */
+}
+
+
+
+/* Estilo para mobile */
+@media (max-width: 768px){
+  /* Estiliza o botão do hambúrguer */
+  .menu-hamburguer {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001; /* Garante que fique acima do menu */
+    
+  }
+    .topo-do-site .img-topo-site img {
+      display:none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+  .menu-hamburguer .linha {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  /* Esconde o menu de desktop em telas menores */
+  .menu-desktop {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding-top: 60px;
+    box-shadow: 0 8px 16px honeydew;
+    z-index: 1000;
+  }
+
+  /* Exibe o menu quando a classe 'ativo' é adicionada */
+  .menu-desktop.ativo {
+    display: block;
+  }
+
+  .menu-desktop ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu-desktop li {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .menu-desktop li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-desktop a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+  }
+
+  /* Efeito de rotação no ícone do hambúrguer para simular o "X" */
+  .menu-hamburguer.ativo .linha:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-hamburguer.ativo .linha:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-hamburguer.ativo .linha:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

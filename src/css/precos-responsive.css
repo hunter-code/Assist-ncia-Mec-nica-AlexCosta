@@ -1,0 +1,208 @@
+/* ==========================================================================
+   CONFIGURAÇÃO BASE (Para telas grandes / Desktop) - PREÇOS-MOBILE
+   ========================================================================== */
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.header-container, .line-footer .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Oculta elementos do menu mobile no desktop */
+.btn-abrir-menu, .menu-mobile, .overlay-menu, .menu-hamburguer {
+    display: none;
+}
+
+/* Estrutura base da tabela */
+.container-table {
+    width: 100%;
+    margin: 40px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE: MEDIA QUERY PARA DISPOSITIVOS MÓVEIS (Até 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajustes do Topo (Header) */
+    .menu-desktop, .btn-contato {
+        display: none !important;
+    }
+/* Meus Ajustes(Acréscimo da cor padrão em hexadecimal #fff) */
+    .btn-abrir-menu {
+        display: block;
+        font-size: 30px;
+        color:#fff;
+        cursor: pointer;
+    }
+
+    .logo img {
+        max-width: 180px;
+        height: auto;
+    }
+
+    /* 2. Solução Responsiva para a Tabela */
+    .container-table {
+        overflow-x: auto; /* Cria barra de rolagem horizontal se a tabela for maior que a tela */
+        -webkit-overflow-scrolling: touch; /* Deixa a rolagem suave em iPhones/iPads */
+        margin: 20px 0;
+    }
+
+    table {
+        min-width: 600px; /* Garante que a tabela mantenha um tamanho legível para o usuário rolar */
+    }
+
+    th, td {
+        padding: 10px 8px; /* Reduz o espaçamento interno para poupar espaço */
+        font-size: 14px; /* Diminui levemente o texto no celular */
+    }
+
+    /* 3. Ajustes do Rodapé(Mudança de classe e acréscimo de displayflex com flex-direction column) (Footer) */
+  /*   .line-footer .flex ->Meus ajustes */.btn-social {
+        display:flex;
+        flex-direction: row; /* Empilha o logo e os botões sociais */
+        gap: 20px;
+        text-align: center;
+    }
+   /*Meus ajustes*/
+    .logo-footer img {
+        max-width: 200px;
+        margin-left: 30px;
+        height: auto;
+    }
+
+     /* Exibe o botão de abrir o menu mobile ====================================================*/
+    .btn-abrir-menu {
+        display: block;
+        font-size: 30px;
+         color: #fff; /* Altere a cor conforme seu design */
+        cursor: pointer; 
+    } 
+
+     
+    /* Configura o painel do menu mobile (escondido por padrão fora da tela) */
+/* Configura o painel do menu mobile */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto fora da tela */
+    width: 70%; 
+    height: 100vh;
+    background-color: #252525 !important; /* Cor cinza escuro visível */
+    z-index: 9999;
+    transition: 0.5s ease-in-out;
+    padding: 80px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    display: block !important; /* Força o container a existir */
+}
+
+/* Quando ganha a classe ativa, desliza para a tela */
+.menu-mobile.abrir-menu {
+    right: 0 !important;
+}
+
+/* Torna a lista visível e remove estilos do desktop */
+.menu-mobile nav {
+    display: block !important;
+}
+
+.menu-mobile nav ul {
+    display: flex !important;
+    flex-direction: column !important; /* Coloca um link abaixo do outro */
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.menu-mobile nav ul li {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Estiliza os links com cor branca contrastante */
+.menu-mobile nav ul li a {
+    color: #ffffff !important; /* Texto branco puro */
+    text-decoration: none !important;
+    font-size: 20px !important;
+    display: block !important;
+    padding: 15px 10px !important;
+    border-bottom: 1px solid #444 !important; /* Linha divisória */
+}
+
+/* Botão de fechar (X) */
+.menu-mobile .btn-fechar {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 28px;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+
+/* ESTA É A CLASSE CHAVE: Quando o JavaScript adicionar 'abrir-menu', o menu aparece */
+.menu-mobile.abrir-menu {
+    right: 0 !important; /* Traz o menu para dentro da tela */
+}
+
+/* Torna a lista visível e remove estilos do desktop */
+.menu-mobile nav {
+    display: block !important;
+}
+
+/* Configura o fundo escuro transparente atrás do menu */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    display: none; /* Escondido por padrão */
+}
+
+/* Quando o menu abrir, mostra o fundo escuro também */
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+/* Estilização do botão 'X' de fechar dentro do menu */
+.menu-mobile .btn-fechar {
+    position: absolute;
+    top: 30px;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Ajuste simples para os links ficarem um abaixo do outro */
+.menu-mobile nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+
+
+/*========================FIM ABRIR MENU=============================================================*/
+}

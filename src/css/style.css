@@ -1,0 +1,620 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    /* height: 100vh; */
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+h1,h2,h3 , span {
+   font-family: 'Bebas Neue', sans-serif;
+  
+}
+
+p , a {
+     font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+}
+
+.flex .project {
+    text-align: center;
+    margin-left: 1000px;
+}
+
+
+  .flex  {
+     display: flex;
+    flex-wrap: wrap;  
+      display: grid;
+     grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(auto,auto); 
+    gap: 4rem 4rem;
+ 
+  }
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #551bb3;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato button a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+.logo a , .logo-footer a{
+    color: #551bb3;
+    text-align:center;
+   
+}
+
+footer .logo-footer a {
+    text-decoration:none;
+}
+
+
+/*H1*/
+
+#inicio {
+    line-height: 3.125rem;
+  
+}
+
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #551bb3;
+}
+
+button:hover,
+form .btn-enviar button:hover {
+    box-shadow: 0px 0px 100px #551bb3;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header nav.menu-desktop  a:hover {
+    color:#551bb3;
+    box-shadow: 0 0 40px 20px #551bb3;
+     transform: scale(1.05); 
+    transition: ease 0.3s;
+    border-radius: 5px;
+   
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+
+
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu li{
+    color: #551bb3;
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #551bb3;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}   
+
+.menu-mobile nav ul li a:hover{
+    background-color: #551bb3;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #551bb3;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    border-radius: 50%;
+    margin-top: -300px;
+}
+
+
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS HABILIDADES */
+section.habilidades {
+    padding: 40px 4%;
+}
+
+section.habilidades .flex {
+    gap: 5px;
+}
+
+.habilidades .habilidades-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.habilidades .habilidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 100px #551bb3;
+}
+
+.habilidades .habilidades-box i {
+    font-size: 70px;
+    color: #551bb3;
+}
+
+.habilidades .habilidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 5px;
+}
+
+.sobre .interface .flex img {
+    margin-top: -200px;
+}
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #551bb3;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #551bb3;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+
+
+/* ESTILO DO PORTFÓLIO */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 90px 100px #551bb3;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 18.125rem;
+    height: 28.75rem;
+    background-size: cover;
+    background-position: center;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative; /*//solução para o overlay funcionar */
+    overflow: hidden;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.img-port .overlay {
+    position: absolute;
+    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: #000000b8;
+    color: #fff;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
+}
+
+.img-port .overlay {
+  text-align: center;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar button {
+    width: 147px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #551bb3;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 25px #551bb3;
+}
+
+footer .flex {
+    justify-content: space-between; 
+}
+
+
+footer .line-footer {
+    padding: 20px 0;
+    margin-right: 300px;
+}
+
+.borda {
+    border-top: 2px solid #551bb3;
+}
+
+footer .line-footer p i {
+    color: #551bb3;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fff;
+}
+
+/* ======================PÁGINA TRABALHOS=========================== */
+
+.topo-do-site .img-topo-site .stop {
+    margin-top: 10px;
+    animation : none;
+    width: 500px;
+    border-radius: 5px;
+     border: 2px solid  #551bb3;
+}
+
+.process .flex{
+    display:flex;
+    flex-direction: column;
+}
+
+.process-painel{
+    display: flex;
+}
+
+.container {
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .content{
+    width: 400px;
+    margin-top: 10rem;
+   margin-right: 170px;
+}
+.container img {
+
+    border-radius: 5px;
+    border: 2px solid  #551bb3;
+     width: 500px;
+}
+ 
+ .inactive {
+   pointer-events: none;
+}
+
+section.portfolio .process {
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.text{
+    display: flex;
+    flex-wrap: wrap;
+}
+.proecess-title{
+    margin-bottom: 88px;
+}
+/*========================== ESTILO PARA CONTROLE DO APARECIMENTO DAS diV'S ==================================*/
+.process-painel .img-port {
+    width:100%;
+    height:50vh; /*Garantir que tenha rola gem depágina*/
+    background-size: cover;
+    margin : 30px auto;
+    position: relative;
+    overflow: hidden;
+    
+} 
+
+/*Estilo inicial : Oculto e ligeiramente movido para baixo*/
+.process-painel .section-hidden {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out,transform 0.6s, ease-out;
+
+}
+
+/*Estilo quando estiver visível : Terá opacidade total e posicionamento original*/
+
+.section-hidden.section-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: ease 3s;
+}
+
+.work .logo-footer{
+    margin-top : 100px;
+}
+
+/*========================== ESTILO PARA CONTROLE DO APARECIMENTO ÚNICO DAS diV'S ==================================*/
+
+ /* Opcional: define um estilo inicial para que o JavaScript controle a visibilidade */
+    .filha-destino {   
+        padding: 20px;
+        margin-bottom: 10px;
+    };
+
+
+/*teste*/
+
+.content-div {
+    display: none; /* Oculta todas as divs por padrão */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.content-div.active {
+    display: block; /* A div com a classe 'active' será exibida */
+}
+
+/*========================== ESTILO PARA PARA AS TABELAS ==================================*/
+  
+
+
+  table {
+      border-radius: 0.93rem;
+      border: 5px solid #551bb3; /* Adiciona bordas às células */
+      border-collapse: separate; /*Colapsa as bordas para um visual mais limpo*/
+      overflow: hidden;
+      border-spacing: 0; 
+      width: 80%; /* Opcional: faz a tabela ocupar toda a largura disponível */
+      height: 90vh;
+      margin: 1.25rem auto; /*Centraliza a tabelha horizontalmente*/
+  }
+ 
+  caption {
+   display:none;
+  }
+ 
+  th, td {
+    border: 1px solid black;
+    padding: 8px; /* Espaçamento interno nas células */
+    text-align: left; /* Alinha o texto à esquerda */
+    overflow: hidden;
+  }
+
+  th {
+    font-family: 'Poppins',sans-serif;
+    color: honeydew;
+    background-color:#600beb;
+    text-align: center;
+  }
+
+  tr {
+    background-color:#8f63d6 ; /* Cor de fundo para o cabeçalho */
+    font-size: 20px;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  tr:hover, tr:nth-child(even):hover{
+      cursor: pointer;
+      color: indigo;
+      background-color: white;
+      opacity: 0.9;
+      
+  }
+   
+  tr:nth-child(even) {
+    background-color: #600beb; /* Opcional: zebrado para melhor leitura */
+  }
